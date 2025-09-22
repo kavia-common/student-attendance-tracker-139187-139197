@@ -10,7 +10,7 @@ export default function DashboardLayout({ current, onNavigate, children }) {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "var(--color-background)" }}>
       <Header userEmail={user?.email} onLogout={logout} />
-      <div style={{ display: "flex", alignItems: "stretch", gap: 16, padding: 16 }}>
+      <div style={{ display: "flex", alignItems: "stretch", gap: 16, padding: 16, flexWrap: "wrap" }}>
         <Sidebar current={current} onNavigate={onNavigate} />
         <main style={{ flex: 1, display: "flex", flexDirection: "column", gap: 16, minWidth: 0 }}>
           {children}

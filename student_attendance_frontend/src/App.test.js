@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders app brand", () => {
+test("renders app brand or login brand", () => {
   render(<App />);
   const title = screen.getByText(/Attendance Tracker/i);
   expect(title).toBeInTheDocument();

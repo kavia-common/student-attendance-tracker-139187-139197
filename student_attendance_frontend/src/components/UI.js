@@ -128,6 +128,8 @@ export function Sidebar({ current, onNavigate }) {
 
   return (
     <aside
+      role="navigation"
+      aria-label="Main navigation"
       style={{
         width: 240,
         backgroundColor: "var(--color-surface)",
@@ -136,6 +138,8 @@ export function Sidebar({ current, onNavigate }) {
         position: "sticky",
         top: 64,
         height: "calc(100vh - 64px)",
+        maxHeight: "calc(100vh - 64px)",
+        overflowY: "auto",
       }}
     >
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -156,6 +160,7 @@ export function Sidebar({ current, onNavigate }) {
                 cursor: "pointer",
                 transition: "var(--transition)",
               }}
+              aria-current={active ? "page" : undefined}
             >
               <span style={{ marginRight: 8 }} aria-hidden>
                 {it.icon}
